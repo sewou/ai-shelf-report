@@ -7,8 +7,8 @@
 <link rel="canonical" href="https://sewou.github.io/ai-shelf-report/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="The AI Shelf Report">
-<meta property="og:title" content="Which perfume brands and stores do AI assistants name when UAE shoppers ask?">
-<meta property="og:description" content="3 AI assistants answered the same 100 shopper questions, 5 times each, through their APIs. Only the 76 that name no brand count toward the ranking.">
+<meta property="og:title" content="How much of an AI visibility score is the measurement, not the market?">
+<meta property="og:description" content="One category, scored six different ways. The same 1,500 answers put a different brand in first place depending on which questions count, which assistant is asked, and whether the score is read from the API or the app a shopper actually opens.">
 <meta property="og:url" content="https://sewou.github.io/ai-shelf-report/">
 <meta property="og:image" content="https://sewou.github.io/ai-shelf-report/card.png">
 <meta property="og:image:width" content="1200">
@@ -407,8 +407,8 @@ h2.section {      /* report titles: the largest thing on the page after the head
 
     <!-- headline block -->
     <div style="margin-top:22px">
-      <h1 style="margin:0;font-family:var(--font-display);font-size:33px;font-weight:var(--w-semi);line-height:1.06;letter-spacing:var(--ls-display);max-width:19em;text-wrap:balance">Which perfume brands and stores do AI assistants name when UAE shoppers ask?</h1>
-      <p style="margin:13px 0 0;font-size:13px;line-height:1.55;color:var(--ink-2);max-width:44em;text-wrap:pretty">3 AI assistants answered the same 100 shopper questions, 5 times each, through their APIs. Only the 76 that name no brand count toward the ranking.</p>
+      <h1 style="margin:0;font-family:var(--font-display);font-size:33px;font-weight:var(--w-semi);line-height:1.06;letter-spacing:var(--ls-display);max-width:19em;text-wrap:balance">How much of an AI visibility score is the measurement, not the market?</h1>
+      <p style="margin:13px 0 0;font-size:13px;line-height:1.55;color:var(--ink-2);max-width:44em;text-wrap:pretty">One category, scored six different ways. The same 1,500 answers put a different brand in first place depending on which questions count, which assistant is asked, and whether the score is read from the API or the app a shopper actually opens.</p>
     </div>
 
     <!-- key figures -->
@@ -441,7 +441,7 @@ h2.section {      /* report titles: the largest thing on the page after the head
       <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:var(--sp-5)">
         <div>
           <h2 class="section">Shelf Share</h2>
-          <p class="section-note">38 of the 43 tracked brands were named at least once. 7 come up often enough to rank.</p>
+          <p class="section-note">This is the single number an AI visibility tool would report. Everything below is what it averages away.</p>
         </div>
         <div style="display:flex;align-items:center;gap:14px;flex-wrap:nowrap;padding-bottom:2px">
           <div style="display:flex;align-items:center;gap:6px"><span style="width:8px;height:8px;background:var(--state-visible-fill);display:block"></span><span style="font-size:10.5px;color:var(--ink-3)">Visible</span></div>
@@ -853,6 +853,70 @@ h2.section {      /* report titles: the largest thing on the page after the head
       </div>
       
     </div>
+
+    <!-- the levers: what a single score is actually the output of -->
+    
+    <div style="margin-top:26px;background:var(--card);padding:18px 20px 16px">
+      <h2 class="section">What moves that number</h2>
+      <p class="section-note">Six choices sit behind any single visibility score. Here is what each one was worth in this category.</p>
+
+      <div style="margin-top:15px;display:flex;flex-direction:column">
+        
+        <div style="display:grid;grid-template-columns:13.5em minmax(0,1fr);column-gap:20px;align-items:baseline;padding:10px 0;border-bottom:var(--hair) solid var(--rule-faint);">
+          <div>
+            <div style="font-size:12.5px;font-weight:var(--w-medium);color:var(--ink);letter-spacing:var(--ls-tight)">Which questions count</div>
+            <div style="font-size:10.5px;color:var(--ink-4);margin-top:3px;line-height:1.35">Questions that name a brand, or only questions that do not.</div>
+          </div>
+          <div style="font-size:12px;color:var(--ink-2);line-height:1.5">Amouage ranks 1st on questions that name no brand, 10th on questions that do.</div>
+        </div>
+        
+        <div style="display:grid;grid-template-columns:13.5em minmax(0,1fr);column-gap:20px;align-items:baseline;padding:10px 0;border-bottom:var(--hair) solid var(--rule-faint);">
+          <div>
+            <div style="font-size:12.5px;font-weight:var(--w-medium);color:var(--ink);letter-spacing:var(--ls-tight)">Which assistant is asked</div>
+            <div style="font-size:10.5px;color:var(--ink-4);margin-top:3px;line-height:1.35">One engine, or several averaged together.</div>
+          </div>
+          <div style="font-size:12px;color:var(--ink-2);line-height:1.5">Gemini puts Lattafa first, ChatGPT puts Amouage first, Perplexity puts Ajmal first.</div>
+        </div>
+        
+        <div style="display:grid;grid-template-columns:13.5em minmax(0,1fr);column-gap:20px;align-items:baseline;padding:10px 0;border-bottom:var(--hair) solid var(--rule-faint);">
+          <div>
+            <div style="font-size:12.5px;font-weight:var(--w-medium);color:var(--ink);letter-spacing:var(--ls-tight)">What the shopper is asking for</div>
+            <div style="font-size:10.5px;color:var(--ink-4);margin-top:3px;line-height:1.35">Price and occasion cues in the question.</div>
+          </div>
+          <div style="font-size:12px;color:var(--ink-2);line-height:1.5">Lattafa leads the value questions with 67.2%. Amouage leads the premium ones with 52.3%.</div>
+        </div>
+        
+        <div style="display:grid;grid-template-columns:13.5em minmax(0,1fr);column-gap:20px;align-items:baseline;padding:10px 0;border-bottom:var(--hair) solid var(--rule-faint);">
+          <div>
+            <div style="font-size:12.5px;font-weight:var(--w-medium);color:var(--ink);letter-spacing:var(--ls-tight)">Whether position counts</div>
+            <div style="font-size:10.5px;color:var(--ink-4);margin-top:3px;line-height:1.35">A name near the end of an answer, or only a name near the start.</div>
+          </div>
+          <div style="font-size:12px;color:var(--ink-2);line-height:1.5">On Gemini, Dior is named on more questions than Lattafa and still places below it, because it appears later in the answer.</div>
+        </div>
+        
+        <div style="display:grid;grid-template-columns:13.5em minmax(0,1fr);column-gap:20px;align-items:baseline;padding:10px 0;border-bottom:var(--hair) solid var(--rule-faint);">
+          <div>
+            <div style="font-size:12.5px;font-weight:var(--w-medium);color:var(--ink);letter-spacing:var(--ls-tight)">API or the app</div>
+            <div style="font-size:10.5px;color:var(--ink-4);margin-top:3px;line-height:1.35">The interface a tool measures through.</div>
+          </div>
+          <div style="font-size:12px;color:var(--ink-2);line-height:1.5">One app answer carries 37% of what that assistant names consistently. 6 of 36 app answers named no brand at all.</div>
+        </div>
+        
+        <div style="display:grid;grid-template-columns:13.5em minmax(0,1fr);column-gap:20px;align-items:baseline;padding:10px 0;">
+          <div>
+            <div style="font-size:12.5px;font-weight:var(--w-medium);color:var(--ink);letter-spacing:var(--ls-tight)">How much is just noise</div>
+            <div style="font-size:10.5px;color:var(--ink-4);margin-top:3px;line-height:1.35">The same question, asked again.</div>
+          </div>
+          <div style="font-size:12px;color:var(--ink-2);line-height:1.5">A single API run reproduces only 75% of its own engine&#39;s consistent answer. Any gap smaller than that is not a finding.</div>
+        </div>
+        
+      </div>
+
+      <p class="rule-t" style="margin:14px 0 0;padding-top:12px;font-size:11.5px;line-height:1.5;color:var(--ink-3)">
+        None of these is the wrong choice. They are simply choices, and a score reported without them is a number whose meaning cannot be checked.
+      </p>
+    </div>
+    
 
     <!-- THE FINDING: the three assistants do not agree -->
     

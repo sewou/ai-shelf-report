@@ -1,10 +1,10 @@
 {
  "payload_version": "1.0",
- "generated_utc": "2026-08-14T12:53:22+00:00",
+ "generated_utc": "2026-08-14T14:35:03+00:00",
  "report": {
   "title_kicker": "Perfume · United Arab Emirates · August 2026",
-  "headline": "Which perfume brands and stores do AI assistants name when UAE shoppers ask?",
-  "subtitle": "3 AI assistants answered the same 100 shopper questions, 5 times each, through their APIs. Only the 76 that name no brand count toward the ranking.",
+  "headline": "How much of an AI visibility score is the measurement, not the market?",
+  "subtitle": "One category, scored six different ways. The same 1,500 answers put a different brand in first place depending on which questions count, which assistant is asked, and whether the score is read from the API or the app a shopper actually opens.",
   "dateline": [
    [
     "Category",
@@ -77,7 +77,7 @@
  },
  "axis_max": 20.0,
  "notes": {
-  "leaderboard": "38 of the 43 tracked brands were named at least once. 7 come up often enough to rank.",
+  "leaderboard": "This is the single number an AI visibility tool would report. Everything below is what it averages away.",
   "by_engine": "No two assistants put the same brand first.",
   "occupancy": "Gemini names six or more brands on 43 of the 76 questions. ChatGPT names two or fewer on 45.",
   "segments": "Lattafa takes 67.2% of the 12 value questions, and reaches the top three on neither of the other two."
@@ -696,6 +696,38 @@
    }
   ]
  },
+ "levers": [
+  {
+   "choice": "Which questions count",
+   "detail": "Questions that name a brand, or only questions that do not.",
+   "effect": "Amouage ranks 1st on questions that name no brand, 10th on questions that do."
+  },
+  {
+   "choice": "Which assistant is asked",
+   "detail": "One engine, or several averaged together.",
+   "effect": "Gemini puts Lattafa first, ChatGPT puts Amouage first, Perplexity puts Ajmal first."
+  },
+  {
+   "choice": "What the shopper is asking for",
+   "detail": "Price and occasion cues in the question.",
+   "effect": "Lattafa leads the value questions with 67.2%. Amouage leads the premium ones with 52.3%."
+  },
+  {
+   "choice": "Whether position counts",
+   "detail": "A name near the end of an answer, or only a name near the start.",
+   "effect": "On Gemini, Dior is named on more questions than Lattafa and still places below it, because it appears later in the answer."
+  },
+  {
+   "choice": "API or the app",
+   "detail": "The interface a tool measures through.",
+   "effect": "One app answer carries 37% of what that assistant names consistently. 6 of 36 app answers named no brand at all."
+  },
+  {
+   "choice": "How much is just noise",
+   "detail": "The same question, asked again.",
+   "effect": "A single API run reproduces only 75% of its own engine's consistent answer. Any gap smaller than that is not a finding."
+  }
+ ],
  "by_engine": {
   "engines": [
    {
