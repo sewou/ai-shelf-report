@@ -1,10 +1,10 @@
 {
  "payload_version": "1.0",
- "generated_utc": "2026-08-14T12:46:20+00:00",
+ "generated_utc": "2026-08-14T12:53:22+00:00",
  "report": {
   "title_kicker": "Perfume · United Arab Emirates · August 2026",
   "headline": "Which perfume brands and stores do AI assistants name when UAE shoppers ask?",
-  "subtitle": "We asked 3 AI assistants the same 100 shopper questions, 5 times each, through their APIs. Only the 76 that name no brand count toward the ranking.",
+  "subtitle": "3 AI assistants answered the same 100 shopper questions, 5 times each, through their APIs. Only the 76 that name no brand count toward the ranking.",
   "dateline": [
    [
     "Category",
@@ -36,7 +36,8 @@
   "total_responses": 1500,
   "majority_threshold": 3,
   "window_started": "2026-08-13",
-  "window_ends": "2026-08-16",
+  "window_ends": "2026-08-13",
+  "collected_label": "2026-08-13",
   "languages": [
    "en",
    "ar"
@@ -76,7 +77,7 @@
  },
  "axis_max": 20.0,
  "notes": {
-  "leaderboard": "38 of the 43 brands we track were named at least once. 7 come up often enough to rank.",
+  "leaderboard": "38 of the 43 tracked brands were named at least once. 7 come up often enough to rank.",
   "by_engine": "No two assistants put the same brand first.",
   "occupancy": "Gemini names six or more brands on 43 of the 76 questions. ChatGPT names two or fewer on 45.",
   "segments": "Lattafa takes 67.2% of the 12 value questions, and reaches the top three on neither of the other two."
@@ -1220,11 +1221,11 @@
   ],
   [
    "Careful with ‘missing’",
-   "A brand is called missing only if it stayed missing across all 3 assistants. We count those brands but never name them."
+   "A brand is called missing only if it stayed missing across all 3 assistants. Those brands are counted here but never named."
   ],
   [
    "You can check it",
-   "Every number traces back to a saved answer. We will re-run any part of this on request and publish how closely the second run matches."
+   "Every number traces back to a saved answer. Any part of this can be re-run on request, with the match rate published alongside it."
   ]
  ],
  "disclosure_note": "Designated example prompts only; the battery stays sealed so results cannot be optimised against. Raw run logs retained."
