@@ -1,6 +1,6 @@
 {
  "payload_version": "1.0",
- "generated_utc": "2026-08-14T14:35:03+00:00",
+ "generated_utc": "2026-08-14T15:03:02+00:00",
  "report": {
   "title_kicker": "Perfume · United Arab Emirates · August 2026",
   "headline": "How much of an AI visibility score is the measurement, not the market?",
@@ -80,7 +80,7 @@
   "leaderboard": "This is the single number an AI visibility tool would report. Everything below is what it averages away.",
   "by_engine": "No two assistants put the same brand first.",
   "occupancy": "Gemini names six or more brands on 43 of the 76 questions. ChatGPT names two or fewer on 45.",
-  "segments": "Lattafa takes 67.2% of the 12 value questions, and reaches the top three on neither of the other two."
+  "segments": "Lattafa takes 67.2% of the 12 low budget questions, and reaches the top three on neither of the other two."
  },
  "leaderboard": [
   {
@@ -710,7 +710,7 @@
   {
    "choice": "What the shopper is asking for",
    "detail": "Price and occasion cues in the question.",
-   "effect": "Lattafa leads the value questions with 67.2%. Amouage leads the premium ones with 52.3%."
+   "effect": "Lattafa leads the low budget questions with 67.2%. Amouage leads the premium & niche ones with 52.3%."
   },
   {
    "choice": "Whether position counts",
@@ -963,7 +963,7 @@
  "segments": [
   {
    "key": "value",
-   "label": "Value & dupes",
+   "label": "Low budget",
    "note": "a price ceiling or a dupe request",
    "n_prompts": 12,
    "share_of_battery": 12,
