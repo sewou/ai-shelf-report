@@ -1,0 +1,5846 @@
+{
+ "record_version": "record-1",
+ "report": {
+  "title": "The AI Shelf Report",
+  "subtitle": "Perfume & Fragrance · United Arab Emirates · August 2026",
+  "headline": "Which perfume brands and stores did three AI assistants name when UAE shoppers asked what to buy?",
+  "edition": "First edition",
+  "question": "When shoppers ask AI assistants what perfume to buy in the UAE, which brands do the assistants name, and how much do the results vary with the question, the assistant and the measurement method?"
+ },
+ "method": {
+  "n_prompts": 100,
+  "n_blind": 76,
+  "n_named": 24,
+  "runs_per_prompt": 5,
+  "n_engines": 3,
+  "total_answers": 1500,
+  "majority_threshold": 3,
+  "collected": "2026-08-13",
+  "engines": [
+   {
+    "key": "openai",
+    "label": "ChatGPT",
+    "model_id": "gpt-5.6-terra",
+    "n_answers": 500
+   },
+   {
+    "key": "gemini",
+    "label": "Gemini",
+    "model_id": "gemini-3.5-flash",
+    "n_answers": 500
+   },
+   {
+    "key": "perplexity",
+    "label": "Perplexity",
+    "model_id": "sonar",
+    "n_answers": 500
+   }
+  ],
+  "conditions": [
+   "Fresh context for every run; no conversation carried between runs.",
+   "Single turn: the question was sent once and the first answer recorded.",
+   "Live web search enabled on all three assistants.",
+   "No custom system prompt.",
+   "Provider-default sampling settings.",
+   "All runs collected on 13 August 2026."
+  ]
+ },
+ "corpus": {
+  "total_items": 8102,
+  "sources": [
+   {
+    "name": "Video comments across 119 videos",
+    "count": 5902
+   },
+   {
+    "name": "Community posts, 7 subreddits",
+    "count": 1127
+   },
+   {
+    "name": "Search autocomplete, google.ae (EN + AR)",
+    "count": 951
+   },
+   {
+    "name": "Video titles",
+    "count": 119
+   },
+   {
+    "name": "Forum threads (Basenotes, Fragrantica)",
+    "count": 3
+   }
+  ],
+  "stats": {
+   "ask_type_posts": 691,
+   "uae_context_posts": 429,
+   "median_ask_words": 72,
+   "code_switch_rate_ar": 0.099,
+   "budget_mention_rate": 0.119,
+   "arabic_comments": 2841
+  }
+ },
+ "battery": {
+  "n_total": 100,
+  "n_blind": 76,
+  "n_named": 24,
+  "by_lang": {
+   "ar": 50,
+   "en": 50
+  },
+  "by_group": {
+   "constraint": 26,
+   "discovery": 26,
+   "usecase": 24,
+   "validation": 24
+  },
+  "by_register": {
+   "long": 18,
+   "mid": 50,
+   "short": 32
+  },
+  "by_segment": {
+   "neutral": 68,
+   "premium": 12,
+   "value": 20
+  },
+  "blind_by_segment": {
+   "neutral": 54,
+   "premium": 10,
+   "value": 12
+  },
+  "blind_by_register": {
+   "long": 14,
+   "mid": 40,
+   "short": 22
+  },
+  "flags": {
+   "budget": 18,
+   "code_switch": 4,
+   "exclusion": 18,
+   "persona": 27,
+   "typo": 13
+  },
+  "geo_marked_blind": 32,
+  "geo_marker_rule": "named Gulf place or demonym in the question text, in either script",
+  "examples": [
+   {
+    "id": "AR-C03",
+    "lang": "ar",
+    "group": "constraint",
+    "segment": "premium",
+    "text": "أدور هدية عطر فخمة لعمي — ذوقه غالي والسعر مو مشكلة، حتى فوق ١٠٠٠ درهم إذا يستاهل. وش العطر اللي يقول \"فخامة\" لرجل كبير خليجي؟"
+   },
+   {
+    "id": "AR-D01",
+    "lang": "ar",
+    "group": "discovery",
+    "segment": "neutral",
+    "text": "شو أفضل عطر رجالي ثابت ممكن ألقاه هني في الإمارات؟"
+   },
+   {
+    "id": "AR-U08",
+    "lang": "ar",
+    "group": "usecase",
+    "segment": "value",
+    "text": "عطر ريحته غالية بس سعره لا ؟ 😅"
+   },
+   {
+    "id": "EN-C03",
+    "lang": "en",
+    "group": "constraint",
+    "segment": "premium",
+    "text": "Looking for a seriously impressive perfume as a gift for my father-in-law — he has expensive taste and price honestly isn't an issue, up to 1000+ AED if it's worth it. What says \"luxury\" to an older Arab gentleman?"
+   },
+   {
+    "id": "EN-D01",
+    "lang": "en",
+    "group": "discovery",
+    "segment": "neutral",
+    "text": "What's the best long lasting perfume for men you can actually get in the UAE?"
+   },
+   {
+    "id": "EN-U08",
+    "lang": "en",
+    "group": "usecase",
+    "segment": "value",
+    "text": "perfume that smells expensive but isnt? asking for my wallet"
+   }
+  ],
+  "n_sealed": 94,
+  "hash": "3c767e52b6f79421b3dc57d9b8b464bac6ccb339ed3b656e660138034f1680d9",
+  "hash_groups": [
+   "3c767e52",
+   "b6f79421",
+   "b3dc57d9",
+   "b8b464ba",
+   "c6ccb339",
+   "ed3b656e",
+   "66013803",
+   "4f1680d9"
+  ],
+  "version": 1
+ },
+ "scoring": {
+  "states": [
+   {
+    "state": "Visible",
+    "rule": "named in at least 3 of 5 runs"
+   },
+   {
+    "state": "Intermittent",
+    "rule": "named in 1 or 2 runs"
+   },
+   {
+    "state": "Absent",
+    "rule": "named in 0 runs"
+   }
+  ],
+  "weights": [
+   {
+    "position": "first mention in the answer",
+    "weight": "1.0"
+   },
+   {
+    "position": "second mention",
+    "weight": "0.7"
+   },
+   {
+    "position": "third or later",
+    "weight": "0.5"
+   }
+  ],
+  "notes": [
+   "Shelf Share is the position-weighted share of questions on which an entity was Visible. It is not a count of appearances.",
+   "Entity extraction ran as a separate model pass over each stored answer, then names were canonicalised against an alias table fixed before collection.",
+   "Domains appearing only in an answer's citation list were excluded from extraction, so a cited retailer is not counted as a mention.",
+   "The weights and the 3-of-5 threshold are this study's scoring definition. They are not derived from anything observed."
+  ]
+ },
+ "board": {
+  "tracked": [
+   {
+    "rank": 1,
+    "name": "Amouage",
+    "share": 0.182017,
+    "share_label": "18.20%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 20,
+      "share_label": "14.1%"
+     },
+     "openai": {
+      "visible": 32,
+      "share_label": "31.4%"
+     },
+     "perplexity": {
+      "visible": 10,
+      "share_label": "9.1%"
+     }
+    }
+   },
+   {
+    "rank": 2,
+    "name": "Lattafa",
+    "share": 0.150877,
+    "share_label": "15.09%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 25,
+      "share_label": "21.2%"
+     },
+     "openai": {
+      "visible": 14,
+      "share_label": "12.6%"
+     },
+     "perplexity": {
+      "visible": 11,
+      "share_label": "11.4%"
+     }
+    }
+   },
+   {
+    "rank": 3,
+    "name": "Rasasi",
+    "share": 0.130702,
+    "share_label": "13.07%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 25,
+      "share_label": "18.8%"
+     },
+     "openai": {
+      "visible": 13,
+      "share_label": "9.7%"
+     },
+     "perplexity": {
+      "visible": 13,
+      "share_label": "10.7%"
+     }
+    }
+   },
+   {
+    "rank": 4,
+    "name": "Ajmal",
+    "share": 0.12193,
+    "share_label": "12.19%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 10,
+      "share_label": "7.5%"
+     },
+     "openai": {
+      "visible": 10,
+      "share_label": "7.5%"
+     },
+     "perplexity": {
+      "visible": 26,
+      "share_label": "21.6%"
+     }
+    }
+   },
+   {
+    "rank": 5,
+    "name": "Chanel",
+    "share": 0.119298,
+    "share_label": "11.93%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 20,
+      "share_label": "15.7%"
+     },
+     "openai": {
+      "visible": 11,
+      "share_label": "9.7%"
+     },
+     "perplexity": {
+      "visible": 11,
+      "share_label": "10.4%"
+     }
+    }
+   },
+   {
+    "rank": 6,
+    "name": "Dior",
+    "share": 0.114474,
+    "share_label": "11.45%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 27,
+      "share_label": "19.2%"
+     },
+     "openai": {
+      "visible": 7,
+      "share_label": "5.1%"
+     },
+     "perplexity": {
+      "visible": 11,
+      "share_label": "10.0%"
+     }
+    }
+   },
+   {
+    "rank": 7,
+    "name": "Afnan",
+    "share": 0.100439,
+    "share_label": "10.04%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 18,
+      "share_label": "13.4%"
+     },
+     "openai": {
+      "visible": 11,
+      "share_label": "9.9%"
+     },
+     "perplexity": {
+      "visible": 9,
+      "share_label": "6.8%"
+     }
+    }
+   },
+   {
+    "rank": 8,
+    "name": "Swiss Arabian",
+    "share": 0.097807,
+    "share_label": "9.78%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 10,
+      "share_label": "9.2%"
+     },
+     "openai": {
+      "visible": 8,
+      "share_label": "5.8%"
+     },
+     "perplexity": {
+      "visible": 20,
+      "share_label": "14.3%"
+     }
+    }
+   },
+   {
+    "rank": 9,
+    "name": "Maison Francis Kurkdjian",
+    "share": 0.080263,
+    "share_label": "8.03%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 7,
+      "share_label": "6.3%"
+     },
+     "openai": {
+      "visible": 8,
+      "share_label": "6.1%"
+     },
+     "perplexity": {
+      "visible": 13,
+      "share_label": "11.7%"
+     }
+    }
+   },
+   {
+    "rank": 10,
+    "name": "Creed",
+    "share": 0.075,
+    "share_label": "7.50%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 18,
+      "share_label": "12.1%"
+     },
+     "openai": {
+      "visible": 6,
+      "share_label": "3.9%"
+     },
+     "perplexity": {
+      "visible": 8,
+      "share_label": "6.4%"
+     }
+    }
+   },
+   {
+    "rank": 11,
+    "name": "Tom Ford",
+    "share": 0.071053,
+    "share_label": "7.11%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 15,
+      "share_label": "10.7%"
+     },
+     "openai": {
+      "visible": 4,
+      "share_label": "2.6%"
+     },
+     "perplexity": {
+      "visible": 10,
+      "share_label": "8.0%"
+     }
+    }
+   },
+   {
+    "rank": 12,
+    "name": "Armaf",
+    "share": 0.068859,
+    "share_label": "6.89%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 16,
+      "share_label": "11.7%"
+     },
+     "openai": {
+      "visible": 5,
+      "share_label": "3.6%"
+     },
+     "perplexity": {
+      "visible": 7,
+      "share_label": "5.4%"
+     }
+    }
+   },
+   {
+    "rank": 13,
+    "name": "Sephora",
+    "share": 0.057018,
+    "share_label": "5.70%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 8,
+      "share_label": "5.9%"
+     },
+     "openai": {
+      "visible": 7,
+      "share_label": "7.0%"
+     },
+     "perplexity": {
+      "visible": 4,
+      "share_label": "4.2%"
+     }
+    }
+   },
+   {
+    "rank": 14,
+    "name": "Abdul Samad Al Qurashi",
+    "share": 0.055702,
+    "share_label": "5.57%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 10,
+      "share_label": "7.9%"
+     },
+     "openai": {
+      "visible": 6,
+      "share_label": "3.9%"
+     },
+     "perplexity": {
+      "visible": 6,
+      "share_label": "4.9%"
+     }
+    }
+   },
+   {
+    "rank": 15,
+    "name": "Arabian Oud",
+    "share": 0.054386,
+    "share_label": "5.44%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 7,
+      "share_label": "4.6%"
+     },
+     "openai": {
+      "visible": 8,
+      "share_label": "5.3%"
+     },
+     "perplexity": {
+      "visible": 9,
+      "share_label": "6.4%"
+     }
+    }
+   },
+   {
+    "rank": 16,
+    "name": "noon",
+    "share": 0.043421,
+    "share_label": "4.34%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 11,
+      "share_label": "7.2%"
+     },
+     "openai": {
+      "visible": 3,
+      "share_label": "2.2%"
+     },
+     "perplexity": {
+      "visible": 5,
+      "share_label": "3.6%"
+     }
+    }
+   },
+   {
+    "rank": 18,
+    "name": "Yves Saint Laurent",
+    "share": 0.041667,
+    "share_label": "4.17%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 7,
+      "share_label": "5.8%"
+     },
+     "openai": {
+      "visible": 5,
+      "share_label": "4.2%"
+     },
+     "perplexity": {
+      "visible": 3,
+      "share_label": "2.5%"
+     }
+    }
+   },
+   {
+    "rank": 20,
+    "name": "Nishane",
+    "share": 0.041228,
+    "share_label": "4.12%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 10,
+      "share_label": "7.9%"
+     },
+     "openai": {
+      "visible": 3,
+      "share_label": "3.2%"
+     },
+     "perplexity": {
+      "visible": 2,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 22,
+    "name": "Anfasic Dokhoon",
+    "share": 0.036404,
+    "share_label": "3.64%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 6,
+      "share_label": "3.9%"
+     },
+     "openai": {
+      "visible": 8,
+      "share_label": "6.3%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 24,
+    "name": "Al Haramain",
+    "share": 0.032895,
+    "share_label": "3.29%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 6,
+      "share_label": "3.9%"
+     },
+     "openai": {
+      "visible": 3,
+      "share_label": "2.0%"
+     },
+     "perplexity": {
+      "visible": 6,
+      "share_label": "3.9%"
+     }
+    }
+   },
+   {
+    "rank": 25,
+    "name": "Deira Perfume Souk",
+    "share": 0.032895,
+    "share_label": "3.29%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 7,
+      "share_label": "5.3%"
+     },
+     "openai": {
+      "visible": 2,
+      "share_label": "2.0%"
+     },
+     "perplexity": {
+      "visible": 3,
+      "share_label": "2.6%"
+     }
+    }
+   },
+   {
+    "rank": 27,
+    "name": "Roja",
+    "share": 0.030263,
+    "share_label": "3.03%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 7,
+      "share_label": "4.9%"
+     },
+     "openai": {
+      "visible": 3,
+      "share_label": "2.2%"
+     },
+     "perplexity": {
+      "visible": 3,
+      "share_label": "2.0%"
+     }
+    }
+   },
+   {
+    "rank": 28,
+    "name": "Ahmed Al Maghribi",
+    "share": 0.027193,
+    "share_label": "2.72%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 3,
+      "share_label": "2.0%"
+     },
+     "openai": {
+      "visible": 6,
+      "share_label": "4.2%"
+     },
+     "perplexity": {
+      "visible": 3,
+      "share_label": "2.0%"
+     }
+    }
+   },
+   {
+    "rank": 31,
+    "name": "Maison Alhambra",
+    "share": 0.026754,
+    "share_label": "2.68%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 4,
+      "share_label": "2.9%"
+     },
+     "openai": {
+      "visible": 4,
+      "share_label": "2.9%"
+     },
+     "perplexity": {
+      "visible": 3,
+      "share_label": "2.2%"
+     }
+    }
+   },
+   {
+    "rank": 32,
+    "name": "By Kilian",
+    "share": 0.023684,
+    "share_label": "2.37%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 8,
+      "share_label": "5.8%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 2,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 35,
+    "name": "Guerlain",
+    "share": 0.02193,
+    "share_label": "2.19%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 6,
+      "share_label": "4.6%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "perplexity": {
+      "visible": 2,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 36,
+    "name": "Parfums de Marly",
+    "share": 0.02193,
+    "share_label": "2.19%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 5,
+      "share_label": "3.3%"
+     },
+     "openai": {
+      "visible": 4,
+      "share_label": "2.6%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 41,
+    "name": "Paris Corner",
+    "share": 0.015351,
+    "share_label": "1.54%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 4,
+      "share_label": "2.6%"
+     },
+     "perplexity": {
+      "visible": 2,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 42,
+    "name": "V Perfumes",
+    "share": 0.015351,
+    "share_label": "1.54%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 5,
+      "share_label": "3.3%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 2,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 46,
+    "name": "French Avenue",
+    "share": 0.013158,
+    "share_label": "1.32%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 4,
+      "share_label": "2.6%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 47,
+    "name": "Giorgio Armani",
+    "share": 0.013158,
+    "share_label": "1.32%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "openai": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "perplexity": {
+      "visible": 2,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 49,
+    "name": "Ounass",
+    "share": 0.013158,
+    "share_label": "1.32%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 3,
+      "share_label": "2.0%"
+     },
+     "openai": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 59,
+    "name": "The Spirit of Dubai",
+    "share": 0.010965,
+    "share_label": "1.10%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 3,
+      "share_label": "2.0%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 65,
+    "name": "Paris Gallery",
+    "share": 0.007456,
+    "share_label": "0.75%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.9%"
+     }
+    }
+   },
+   {
+    "rank": 84,
+    "name": "Al Majed Oud",
+    "share": 0.005263,
+    "share_label": "0.53%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 2,
+      "share_label": "1.6%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 94,
+    "name": "Amazon.ae",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 132,
+    "name": "Ard Al Zaafaran",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 145,
+    "name": "Emirates Pride",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": true,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   }
+  ],
+  "untracked": [
+   {
+    "rank": 17,
+    "name": "Dubai Mall",
+    "share": 0.042105,
+    "share_label": "4.21%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 7,
+      "share_label": "6.2%"
+     },
+     "openai": {
+      "visible": 5,
+      "share_label": "3.8%"
+     },
+     "perplexity": {
+      "visible": 4,
+      "share_label": "2.6%"
+     }
+    }
+   },
+   {
+    "rank": 19,
+    "name": "Hind Al Oud",
+    "share": 0.041228,
+    "share_label": "4.12%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 7,
+      "share_label": "4.9%"
+     },
+     "openai": {
+      "visible": 8,
+      "share_label": "6.2%"
+     },
+     "perplexity": {
+      "visible": 2,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 21,
+    "name": "Xerjoff",
+    "share": 0.037281,
+    "share_label": "3.73%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 11,
+      "share_label": "7.2%"
+     },
+     "openai": {
+      "visible": 4,
+      "share_label": "2.6%"
+     },
+     "perplexity": {
+      "visible": 2,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 23,
+    "name": "Hermès",
+    "share": 0.03421,
+    "share_label": "3.42%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 4,
+      "share_label": "2.6%"
+     },
+     "openai": {
+      "visible": 6,
+      "share_label": "5.4%"
+     },
+     "perplexity": {
+      "visible": 3,
+      "share_label": "2.2%"
+     }
+    }
+   },
+   {
+    "rank": 26,
+    "name": "Prada",
+    "share": 0.03114,
+    "share_label": "3.11%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 4,
+      "share_label": "3.6%"
+     },
+     "openai": {
+      "visible": 4,
+      "share_label": "4.9%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.9%"
+     }
+    }
+   },
+   {
+    "rank": 29,
+    "name": "Louis Vuitton",
+    "share": 0.027193,
+    "share_label": "2.72%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 8,
+      "share_label": "6.8%"
+     },
+     "openai": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 30,
+    "name": "Orto Parisi",
+    "share": 0.027193,
+    "share_label": "2.72%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 9,
+      "share_label": "8.2%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 33,
+    "name": "Jo Malone",
+    "share": 0.022807,
+    "share_label": "2.28%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "openai": {
+      "visible": 2,
+      "share_label": "2.0%"
+     },
+     "perplexity": {
+      "visible": 5,
+      "share_label": "3.6%"
+     }
+    }
+   },
+   {
+    "rank": 34,
+    "name": "دبي مول",
+    "share": 0.022807,
+    "share_label": "2.28%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 6,
+      "share_label": "4.6%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "perplexity": {
+      "visible": 2,
+      "share_label": "1.6%"
+     }
+    }
+   },
+   {
+    "rank": 37,
+    "name": "Bloomingdale's",
+    "share": 0.018421,
+    "share_label": "1.84%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 6,
+      "share_label": "3.9%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "0.9%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 38,
+    "name": "Frederic Malle",
+    "share": 0.018421,
+    "share_label": "1.84%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 6,
+      "share_label": "4.2%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 39,
+    "name": "Fragrance World",
+    "share": 0.017544,
+    "share_label": "1.75%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "openai": {
+      "visible": 4,
+      "share_label": "2.6%"
+     },
+     "perplexity": {
+      "visible": 2,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 40,
+    "name": "هند العود",
+    "share": 0.017105,
+    "share_label": "1.71%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 4,
+      "share_label": "2.9%"
+     },
+     "openai": {
+      "visible": 2,
+      "share_label": "1.6%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 43,
+    "name": "Bvlgari",
+    "share": 0.014035,
+    "share_label": "1.40%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 6,
+      "share_label": "4.2%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 44,
+    "name": "Byredo",
+    "share": 0.014035,
+    "share_label": "1.40%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 4,
+      "share_label": "2.9%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 45,
+    "name": "Diptyque",
+    "share": 0.013158,
+    "share_label": "1.32%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 5,
+      "share_label": "3.3%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 48,
+    "name": "Narciso Rodriguez",
+    "share": 0.013158,
+    "share_label": "1.32%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 5,
+      "share_label": "3.9%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 50,
+    "name": "Villa 515",
+    "share": 0.013158,
+    "share_label": "1.32%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 4,
+      "share_label": "3.9%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 51,
+    "name": "سوق ديرة للعطور",
+    "share": 0.013158,
+    "share_label": "1.32%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "1.3%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "1.3%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 52,
+    "name": "Frédéric Malle",
+    "share": 0.011842,
+    "share_label": "1.18%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "1.3%"
+     },
+     "openai": {
+      "visible": 2,
+      "share_label": "1.6%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 53,
+    "name": "Mall of the Emirates",
+    "share": 0.011842,
+    "share_label": "1.18%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 4,
+      "share_label": "2.9%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 54,
+    "name": "Dolce & Gabbana",
+    "share": 0.010965,
+    "share_label": "1.10%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 2,
+      "share_label": "2.0%"
+     }
+    }
+   },
+   {
+    "rank": 55,
+    "name": "Gissah",
+    "share": 0.010965,
+    "share_label": "1.10%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 3,
+      "share_label": "2.0%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 56,
+    "name": "Harvey Nichols",
+    "share": 0.010965,
+    "share_label": "1.10%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 5,
+      "share_label": "3.3%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 57,
+    "name": "Initio",
+    "share": 0.010965,
+    "share_label": "1.10%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "1.3%"
+     },
+     "perplexity": {
+      "visible": 2,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 58,
+    "name": "Le Labo",
+    "share": 0.010965,
+    "share_label": "1.10%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 2,
+      "share_label": "2.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 2,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 60,
+    "name": "TryScents AE",
+    "share": 0.010965,
+    "share_label": "1.10%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "perplexity": {
+      "visible": 2,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 61,
+    "name": "Tola",
+    "share": 0.008772,
+    "share_label": "0.88%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 4,
+      "share_label": "2.6%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 62,
+    "name": "Yusuf Bhai",
+    "share": 0.008772,
+    "share_label": "0.88%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 4,
+      "share_label": "2.6%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 63,
+    "name": "Faces",
+    "share": 0.008334,
+    "share_label": "0.83%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "0.9%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.9%"
+     }
+    }
+   },
+   {
+    "rank": 64,
+    "name": "Montblanc",
+    "share": 0.007456,
+    "share_label": "0.75%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 2,
+      "share_label": "1.6%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 66,
+    "name": "Atelier Perfumery",
+    "share": 0.006579,
+    "share_label": "0.66%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 3,
+      "share_label": "2.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 67,
+    "name": "Bentley",
+    "share": 0.006579,
+    "share_label": "0.66%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 68,
+    "name": "Bloomingdale's UAE",
+    "share": 0.006579,
+    "share_label": "0.66%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 69,
+    "name": "Emir",
+    "share": 0.006579,
+    "share_label": "0.66%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 70,
+    "name": "Essential Parfums",
+    "share": 0.006579,
+    "share_label": "0.66%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "1.3%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 71,
+    "name": "Henry Jacques",
+    "share": 0.006579,
+    "share_label": "0.66%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 3,
+      "share_label": "2.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 72,
+    "name": "Jean Paul Gaultier",
+    "share": 0.006579,
+    "share_label": "0.66%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 3,
+      "share_label": "2.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 73,
+    "name": "KAYALI",
+    "share": 0.006579,
+    "share_label": "0.66%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 2,
+      "share_label": "2.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 74,
+    "name": "Kayali",
+    "share": 0.006579,
+    "share_label": "0.66%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 75,
+    "name": "Lalique",
+    "share": 0.006579,
+    "share_label": "0.66%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 3,
+      "share_label": "2.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 76,
+    "name": "Lootah Perfumes",
+    "share": 0.006579,
+    "share_label": "0.66%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 77,
+    "name": "Maison Crivelli",
+    "share": 0.006579,
+    "share_label": "0.66%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 78,
+    "name": "Mancera",
+    "share": 0.006579,
+    "share_label": "0.66%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 2,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 79,
+    "name": "Samawa",
+    "share": 0.006579,
+    "share_label": "0.66%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 80,
+    "name": "Samawa Perfumes",
+    "share": 0.006579,
+    "share_label": "0.66%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 3,
+      "share_label": "2.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 81,
+    "name": "Taif Al Emarat",
+    "share": 0.006579,
+    "share_label": "0.66%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 82,
+    "name": "ياس للعطور",
+    "share": 0.006579,
+    "share_label": "0.66%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 2,
+      "share_label": "2.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 83,
+    "name": "Marc-Antoine Barrois",
+    "share": 0.00614,
+    "share_label": "0.61%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 2,
+      "share_label": "1.8%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 85,
+    "name": "Escentric Molecules",
+    "share": 0.005263,
+    "share_label": "0.53%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 2,
+      "share_label": "1.6%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 86,
+    "name": "Fragrance Du Bois",
+    "share": 0.005263,
+    "share_label": "0.53%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 2,
+      "share_label": "1.6%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 87,
+    "name": "Moon Perfumes Boutique",
+    "share": 0.005263,
+    "share_label": "0.53%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 2,
+      "share_label": "1.6%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 88,
+    "name": "Zara Red Temptation",
+    "share": 0.005263,
+    "share_label": "0.53%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.9%"
+     }
+    }
+   },
+   {
+    "rank": 89,
+    "name": "بوابة العود",
+    "share": 0.005263,
+    "share_label": "0.53%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.9%"
+     }
+    }
+   },
+   {
+    "rank": 90,
+    "name": "Abra Perfumery",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 2,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 91,
+    "name": "Acqua di Giò",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 92,
+    "name": "Acqua di Parma",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "1.3%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 93,
+    "name": "Amazon",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 95,
+    "name": "Ariana Grande Cloud",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 96,
+    "name": "Bortnikoff",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 97,
+    "name": "CK One",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 98,
+    "name": "Clive Christian",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 99,
+    "name": "Coral Perfumes",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 100,
+    "name": "Faces UAE",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 101,
+    "name": "Fine'ry",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 102,
+    "name": "French Fragrance",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 103,
+    "name": "Memo Paris",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 104,
+    "name": "Penhaligon's",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 105,
+    "name": "Sense Of Scent",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 106,
+    "name": "Sisley Paris",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 107,
+    "name": "Terre d'Hermès",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 108,
+    "name": "VILLAIN",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 109,
+    "name": "Wecord London",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 110,
+    "name": "Widian",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 111,
+    "name": "Yas Perfumes",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 112,
+    "name": "Zara",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 2,
+      "share_label": "1.3%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 113,
+    "name": "دخون الإماراتية",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 114,
+    "name": "دخون خليفة",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "1.3%"
+     }
+    }
+   },
+   {
+    "rank": 115,
+    "name": "ديرة",
+    "share": 0.004386,
+    "share_label": "0.44%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "1.3%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 116,
+    "name": "Arabiyat Prestige",
+    "share": 0.00307,
+    "share_label": "0.31%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.9%"
+     }
+    }
+   },
+   {
+    "rank": 117,
+    "name": "Bvlgari Aqva Marine",
+    "share": 0.00307,
+    "share_label": "0.31%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.9%"
+     }
+    }
+   },
+   {
+    "rank": 118,
+    "name": "Lootah",
+    "share": 0.00307,
+    "share_label": "0.31%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "0.9%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 119,
+    "name": "Maison Voisin",
+    "share": 0.00307,
+    "share_label": "0.31%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "0.9%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 120,
+    "name": "Marc Jacobs",
+    "share": 0.00307,
+    "share_label": "0.31%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.9%"
+     }
+    }
+   },
+   {
+    "rank": 121,
+    "name": "Scent Studio",
+    "share": 0.00307,
+    "share_label": "0.31%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.9%"
+     }
+    }
+   },
+   {
+    "rank": 122,
+    "name": "Sospiro",
+    "share": 0.00307,
+    "share_label": "0.31%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.9%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 123,
+    "name": "The 7 Virtues",
+    "share": 0.00307,
+    "share_label": "0.31%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.9%"
+     }
+    }
+   },
+   {
+    "rank": 124,
+    "name": "The Scent Connection",
+    "share": 0.00307,
+    "share_label": "0.31%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.9%"
+     }
+    }
+   },
+   {
+    "rank": 125,
+    "name": "TryScents",
+    "share": 0.00307,
+    "share_label": "0.31%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.9%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 126,
+    "name": "دخون توباكو",
+    "share": 0.00307,
+    "share_label": "0.31%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.9%"
+     }
+    }
+   },
+   {
+    "rank": 127,
+    "name": "مول الإمارات",
+    "share": 0.00307,
+    "share_label": "0.31%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.9%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 128,
+    "name": "Al Hajis",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 129,
+    "name": "Al Khawaneej Walk",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 130,
+    "name": "Anfas",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 131,
+    "name": "Arcadia",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 133,
+    "name": "Atelier Des Ors",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 134,
+    "name": "Atelier Materi",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 135,
+    "name": "BDK Parfums",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 136,
+    "name": "Bin Faris",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 137,
+    "name": "Boadicea the Victorious",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 138,
+    "name": "Centrepoint",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 139,
+    "name": "Cetaphil",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 140,
+    "name": "DIFC",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 141,
+    "name": "Dar Wasl Mall",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 142,
+    "name": "Deira",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 143,
+    "name": "EX NIHILO",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 144,
+    "name": "Elizabeth Arden",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 146,
+    "name": "Ensar Oud",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 147,
+    "name": "FabScents",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 148,
+    "name": "Feira",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 149,
+    "name": "FragranceNet",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 150,
+    "name": "Fueguia 1833",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 151,
+    "name": "Galleria Mall Abu Dhabi",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 152,
+    "name": "Giardini di Toscana",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 153,
+    "name": "Gisou",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 154,
+    "name": "Glossier",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 155,
+    "name": "Initio Parfums Privés",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 156,
+    "name": "Jo Malone London",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 157,
+    "name": "Jomashop",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 158,
+    "name": "Kenzo",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 159,
+    "name": "Le Parfum",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 160,
+    "name": "Matière Première",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 161,
+    "name": "Montale",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 162,
+    "name": "My Perfume Shop",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 163,
+    "name": "MyPerfumes",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 164,
+    "name": "Namshi",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 165,
+    "name": "Ojar",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 166,
+    "name": "Ormonde Jayne",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 167,
+    "name": "Oud Gallery",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 168,
+    "name": "Oud World",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 169,
+    "name": "Paco Rabanne",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 170,
+    "name": "Parfum Library",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 171,
+    "name": "Perfumery by Villa 515",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 172,
+    "name": "Phlur",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 173,
+    "name": "Plethora Perfume Lounge",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 174,
+    "name": "Prada L'Homme",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 175,
+    "name": "Reef Perfumes",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 176,
+    "name": "Riah",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 177,
+    "name": "Sarah Jessica Parker",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 178,
+    "name": "Scent Bazaar",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 179,
+    "name": "Scentories",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 180,
+    "name": "Scents Luxury",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 181,
+    "name": "Sense of Scent",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 182,
+    "name": "Shumukh",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 183,
+    "name": "Smash My Head",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 184,
+    "name": "Sol de Janeiro",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 185,
+    "name": "Supremacy in Heaven",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 186,
+    "name": "Target",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 187,
+    "name": "The Dubai Mall",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 188,
+    "name": "The Scent Library",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 189,
+    "name": "Vaseline",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 190,
+    "name": "Yas Mall",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 191,
+    "name": "bdk Parfums",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 192,
+    "name": "إبراهيم القرشي",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 193,
+    "name": "الدخيل للعود",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 194,
+    "name": "بلومينغديلز",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 195,
+    "name": "بولغاري",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 196,
+    "name": "جان بول غوتييه",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 197,
+    "name": "جبلة للعود",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 198,
+    "name": "دبنهامز",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 199,
+    "name": "زيرجوف",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 200,
+    "name": "سوسبيرو",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 201,
+    "name": "سوق الزل",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 202,
+    "name": "سوق المعيقلية",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 203,
+    "name": "سوق نايف",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 1,
+      "share_label": "0.7%"
+     }
+    }
+   },
+   {
+    "rank": 204,
+    "name": "طيف الإمارات",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 205,
+    "name": "غوالي",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 206,
+    "name": "هند العود (Hind Al Oud)",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 207,
+    "name": "ياس للعطور (Yas Perfumes)",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 208,
+    "name": "ياس مول",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   },
+   {
+    "rank": 209,
+    "name": "يوسف باي",
+    "share": 0.002193,
+    "share_label": "0.22%",
+    "tracked": false,
+    "per_engine": {
+     "gemini": {
+      "visible": 1,
+      "share_label": "0.7%"
+     },
+     "openai": {
+      "visible": 0,
+      "share_label": "0.0%"
+     },
+     "perplexity": {
+      "visible": 0,
+      "share_label": "0.0%"
+     }
+    }
+   }
+  ],
+  "silent": [
+   {
+    "name": "Carolina Herrera",
+    "intermittent_cells": 1,
+    "state": "intermittent only"
+   },
+   {
+    "name": "Dubai Duty Free",
+    "intermittent_cells": 2,
+    "state": "intermittent only"
+   },
+   {
+    "name": "Global Village",
+    "intermittent_cells": 0,
+    "state": "never named"
+   },
+   {
+    "name": "Golden Scent",
+    "intermittent_cells": 1,
+    "state": "intermittent only"
+   },
+   {
+    "name": "Versace",
+    "intermittent_cells": 12,
+    "state": "intermittent only"
+   }
+  ],
+  "n_tracked": 43,
+  "n_tracked_ranked": 38,
+  "n_untracked_ranked": 171,
+  "n_never": 1,
+  "n_intermittent_only": 4,
+  "n_ranked": 209
+ },
+ "segments": {
+  "tables": [
+   {
+    "key": "value",
+    "label": "Low budget",
+    "n_prompts": 12,
+    "n_ranked": 61,
+    "leaders": [
+     {
+      "rank": 1,
+      "name": "Lattafa",
+      "share_label": "67.2%"
+     },
+     {
+      "rank": 2,
+      "name": "Afnan",
+      "share_label": "40.3%"
+     },
+     {
+      "rank": 3,
+      "name": "Armaf",
+      "share_label": "36.7%"
+     },
+     {
+      "rank": 4,
+      "name": "Rasasi",
+      "share_label": "35.0%"
+     },
+     {
+      "rank": 5,
+      "name": "Creed",
+      "share_label": "17.2%"
+     }
+    ]
+   },
+   {
+    "key": "neutral",
+    "label": "Price-unconstrained",
+    "n_prompts": 54,
+    "n_ranked": 150,
+    "leaders": [
+     {
+      "rank": 1,
+      "name": "Amouage",
+      "share_label": "15.9%"
+     },
+     {
+      "rank": 2,
+      "name": "Chanel",
+      "share_label": "14.5%"
+     },
+     {
+      "rank": 3,
+      "name": "Ajmal",
+      "share_label": "13.3%"
+     },
+     {
+      "rank": 4,
+      "name": "Rasasi",
+      "share_label": "10.3%"
+     },
+     {
+      "rank": 5,
+      "name": "Swiss Arabian",
+      "share_label": "10.1%"
+     }
+    ]
+   },
+   {
+    "key": "premium",
+    "label": "Premium & niche",
+    "n_prompts": 10,
+    "n_ranked": 72,
+    "leaders": [
+     {
+      "rank": 1,
+      "name": "Amouage",
+      "share_label": "52.3%"
+     },
+     {
+      "rank": 2,
+      "name": "Maison Francis Kurkdjian",
+      "share_label": "23.7%"
+     },
+     {
+      "rank": 3,
+      "name": "Roja",
+      "share_label": "19.7%"
+     },
+     {
+      "rank": 4,
+      "name": "Dior",
+      "share_label": "18.0%"
+     },
+     {
+      "rank": 5,
+      "name": "Louis Vuitton",
+      "share_label": "11.7%"
+     }
+    ]
+   }
+  ],
+  "matrix": [
+   {
+    "name": "Amouage",
+    "cells": [
+     {
+      "key": "value",
+      "label": "Low budget",
+      "rank": null,
+      "n_ranked": 61,
+      "share_label": null
+     },
+     {
+      "key": "neutral",
+      "label": "Price-unconstrained",
+      "rank": 1,
+      "n_ranked": 150,
+      "share_label": "15.9%"
+     },
+     {
+      "key": "premium",
+      "label": "Premium & niche",
+      "rank": 1,
+      "n_ranked": 72,
+      "share_label": "52.3%"
+     }
+    ]
+   },
+   {
+    "name": "Lattafa",
+    "cells": [
+     {
+      "key": "value",
+      "label": "Low budget",
+      "rank": 1,
+      "n_ranked": 61,
+      "share_label": "67.2%"
+     },
+     {
+      "key": "neutral",
+      "label": "Price-unconstrained",
+      "rank": 11,
+      "n_ranked": 150,
+      "share_label": "6.3%"
+     },
+     {
+      "key": "premium",
+      "label": "Premium & niche",
+      "rank": null,
+      "n_ranked": 72,
+      "share_label": null
+     }
+    ]
+   },
+   {
+    "name": "Rasasi",
+    "cells": [
+     {
+      "key": "value",
+      "label": "Low budget",
+      "rank": 4,
+      "n_ranked": 61,
+      "share_label": "35.0%"
+     },
+     {
+      "key": "neutral",
+      "label": "Price-unconstrained",
+      "rank": 4,
+      "n_ranked": 150,
+      "share_label": "10.3%"
+     },
+     {
+      "key": "premium",
+      "label": "Premium & niche",
+      "rank": 67,
+      "n_ranked": 72,
+      "share_label": "1.7%"
+     }
+    ]
+   },
+   {
+    "name": "Ajmal",
+    "cells": [
+     {
+      "key": "value",
+      "label": "Low budget",
+      "rank": 12,
+      "n_ranked": 61,
+      "share_label": "10.3%"
+     },
+     {
+      "key": "neutral",
+      "label": "Price-unconstrained",
+      "rank": 3,
+      "n_ranked": 150,
+      "share_label": "13.3%"
+     },
+     {
+      "key": "premium",
+      "label": "Premium & niche",
+      "rank": 14,
+      "n_ranked": 72,
+      "share_label": "8.3%"
+     }
+    ]
+   },
+   {
+    "name": "Chanel",
+    "cells": [
+     {
+      "key": "value",
+      "label": "Low budget",
+      "rank": 25,
+      "n_ranked": 61,
+      "share_label": "2.8%"
+     },
+     {
+      "key": "neutral",
+      "label": "Price-unconstrained",
+      "rank": 2,
+      "n_ranked": 150,
+      "share_label": "14.5%"
+     },
+     {
+      "key": "premium",
+      "label": "Premium & niche",
+      "rank": 12,
+      "n_ranked": 72,
+      "share_label": "9.0%"
+     }
+    ]
+   },
+   {
+    "name": "Dior",
+    "cells": [
+     {
+      "key": "value",
+      "label": "Low budget",
+      "rank": 9,
+      "n_ranked": 61,
+      "share_label": "12.5%"
+     },
+     {
+      "key": "neutral",
+      "label": "Price-unconstrained",
+      "rank": 6,
+      "n_ranked": 150,
+      "share_label": "10.0%"
+     },
+     {
+      "key": "premium",
+      "label": "Premium & niche",
+      "rank": 4,
+      "n_ranked": 72,
+      "share_label": "18.0%"
+     }
+    ]
+   }
+  ],
+  "segment_labels": [
+   "Low budget",
+   "Price-unconstrained",
+   "Premium & niche"
+  ]
+ },
+ "by_assistant": {
+  "columns": [
+   {
+    "key": "openai",
+    "label": "ChatGPT",
+    "model": "GPT-5.6 Terra",
+    "rows": [
+     {
+      "rank": 1,
+      "name": "Amouage",
+      "share_label": "31.4%"
+     },
+     {
+      "rank": 2,
+      "name": "Lattafa",
+      "share_label": "12.6%"
+     },
+     {
+      "rank": 3,
+      "name": "Afnan",
+      "share_label": "9.9%"
+     }
+    ]
+   },
+   {
+    "key": "gemini",
+    "label": "Gemini",
+    "model": "3.5 Flash",
+    "rows": [
+     {
+      "rank": 1,
+      "name": "Lattafa",
+      "share_label": "21.2%"
+     },
+     {
+      "rank": 2,
+      "name": "Dior",
+      "share_label": "19.2%"
+     },
+     {
+      "rank": 3,
+      "name": "Rasasi",
+      "share_label": "18.8%"
+     }
+    ]
+   },
+   {
+    "key": "perplexity",
+    "label": "Perplexity",
+    "model": "Sonar",
+    "rows": [
+     {
+      "rank": 1,
+      "name": "Ajmal",
+      "share_label": "21.6%"
+     },
+     {
+      "rank": 2,
+      "name": "Swiss Arabian",
+      "share_label": "14.3%"
+     },
+     {
+      "rank": 3,
+      "name": "Maison Francis Kurkdjian",
+      "share_label": "11.7%"
+     }
+    ]
+   }
+  ],
+  "n_distinct_leaders": 3
+ },
+ "prompted": {
+  "rows": [
+   {
+    "name": "Amouage",
+    "blind": 1,
+    "named": 10,
+    "delta": -9
+   },
+   {
+    "name": "Lattafa",
+    "blind": 2,
+    "named": 1,
+    "delta": 1
+   },
+   {
+    "name": "Rasasi",
+    "blind": 3,
+    "named": 6,
+    "delta": -3
+   },
+   {
+    "name": "Ajmal",
+    "blind": 4,
+    "named": 8,
+    "delta": -4
+   },
+   {
+    "name": "Chanel",
+    "blind": 5,
+    "named": 11,
+    "delta": -6
+   },
+   {
+    "name": "Dior",
+    "blind": 6,
+    "named": 4,
+    "delta": 2
+   },
+   {
+    "name": "Afnan",
+    "blind": 7,
+    "named": 2,
+    "delta": 5
+   },
+   {
+    "name": "Swiss Arabian",
+    "blind": 8,
+    "named": null,
+    "delta": null
+   },
+   {
+    "name": "Maison Francis Kurkdjian",
+    "blind": 9,
+    "named": null,
+    "delta": null
+   },
+   {
+    "name": "Creed",
+    "blind": 10,
+    "named": 5,
+    "delta": 5
+   },
+   {
+    "name": "Tom Ford",
+    "blind": 11,
+    "named": null,
+    "delta": null
+   },
+   {
+    "name": "Armaf",
+    "blind": 12,
+    "named": 3,
+    "delta": 9
+   },
+   {
+    "name": "Sephora",
+    "blind": 13,
+    "named": 7,
+    "delta": 6
+   },
+   {
+    "name": "Abdul Samad Al Qurashi",
+    "blind": 14,
+    "named": null,
+    "delta": null
+   },
+   {
+    "name": "Arabian Oud",
+    "blind": 15,
+    "named": null,
+    "delta": null
+   },
+   {
+    "name": "noon",
+    "blind": 16,
+    "named": 9,
+    "delta": 7
+   },
+   {
+    "name": "Dubai Mall",
+    "blind": 17,
+    "named": null,
+    "delta": null
+   },
+   {
+    "name": "Yves Saint Laurent",
+    "blind": 18,
+    "named": 36,
+    "delta": -18
+   },
+   {
+    "name": "Hind Al Oud",
+    "blind": 19,
+    "named": null,
+    "delta": null
+   },
+   {
+    "name": "Nishane",
+    "blind": 20,
+    "named": null,
+    "delta": null
+   }
+  ],
+  "n_blind_ranked": 209,
+  "n_named_ranked": 42
+ },
+ "breadth": {
+  "columns": [
+   {
+    "key": "openai",
+    "label": "ChatGPT",
+    "n_prompts": 76,
+    "rows": [
+     {
+      "band": "empty",
+      "label": "no brand named",
+      "n": 4,
+      "pct": 5.3
+     },
+     {
+      "band": "thin",
+      "label": "1-2",
+      "n": 41,
+      "pct": 53.9
+     },
+     {
+      "band": "moderate",
+      "label": "3-5",
+      "n": 18,
+      "pct": 23.7
+     },
+     {
+      "band": "crowded",
+      "label": "6 or more",
+      "n": 13,
+      "pct": 17.1
+     }
+    ]
+   },
+   {
+    "key": "gemini",
+    "label": "Gemini",
+    "n_prompts": 76,
+    "rows": [
+     {
+      "band": "empty",
+      "label": "no brand named",
+      "n": 0,
+      "pct": 0.0
+     },
+     {
+      "band": "thin",
+      "label": "1-2",
+      "n": 3,
+      "pct": 3.9
+     },
+     {
+      "band": "moderate",
+      "label": "3-5",
+      "n": 30,
+      "pct": 39.5
+     },
+     {
+      "band": "crowded",
+      "label": "6 or more",
+      "n": 43,
+      "pct": 56.6
+     }
+    ]
+   },
+   {
+    "key": "perplexity",
+    "label": "Perplexity",
+    "n_prompts": 76,
+    "rows": [
+     {
+      "band": "empty",
+      "label": "no brand named",
+      "n": 15,
+      "pct": 19.7
+     },
+     {
+      "band": "thin",
+      "label": "1-2",
+      "n": 12,
+      "pct": 15.8
+     },
+     {
+      "band": "moderate",
+      "label": "3-5",
+      "n": 31,
+      "pct": 40.8
+     },
+     {
+      "band": "crowded",
+      "label": "6 or more",
+      "n": 18,
+      "pct": 23.7
+     }
+    ]
+   }
+  ],
+  "bands": [
+   "no brand named",
+   "1-2",
+   "3-5",
+   "6 or more"
+  ]
+ },
+ "position_note": {
+  "engine": "Gemini",
+  "eligible": 76,
+  "a": {
+   "name": "Dior",
+   "visible": 27,
+   "share_label": "19.2%"
+  },
+  "b": {
+   "name": "Lattafa",
+   "visible": 25,
+   "share_label": "21.2%"
+  }
+ },
+ "consumer": {
+  "rows": [
+   {
+    "key": "openai",
+    "label": "ChatGPT",
+    "app_label": "51.9%",
+    "api_label": "72.7%",
+    "delta_label": "-20.8",
+    "n_answers": 12,
+    "n_empty": 2
+   },
+   {
+    "key": "gemini",
+    "label": "Gemini",
+    "app_label": "37.0%",
+    "api_label": "71.8%",
+    "delta_label": "-34.8",
+    "n_answers": 12,
+    "n_empty": 0
+   },
+   {
+    "key": "perplexity",
+    "label": "Perplexity",
+    "app_label": "26.8%",
+    "api_label": "81.4%",
+    "delta_label": "-54.6",
+    "n_answers": 12,
+    "n_empty": 4
+   }
+  ],
+  "all": {
+   "app_label": "36.7%",
+   "api_label": "75.2%",
+   "delta_label": "-38.5"
+  },
+  "n_prompts": 12,
+  "n_consumer_answers": 36,
+  "n_empty": 6,
+  "baseline": "leave-one-out; reference built from the other runs only",
+  "api_runs": 5,
+  "consumer_runs": 1
+ },
+ "language": {
+  "rows": [
+   {
+    "name": "Amouage",
+    "en_label": "18.5%",
+    "ar_label": "17.9%",
+    "en": 0.185088,
+    "ar": 0.178947,
+    "delta": 0.0061410000000000076
+   },
+   {
+    "name": "Lattafa",
+    "en_label": "16.5%",
+    "ar_label": "13.7%",
+    "en": 0.164912,
+    "ar": 0.136842,
+    "delta": 0.02807000000000001
+   },
+   {
+    "name": "Rasasi",
+    "en_label": "15.8%",
+    "ar_label": "10.4%",
+    "en": 0.157895,
+    "ar": 0.103509,
+    "delta": 0.054386000000000004
+   },
+   {
+    "name": "Ajmal",
+    "en_label": "12.2%",
+    "ar_label": "12.2%",
+    "en": 0.12193,
+    "ar": 0.12193,
+    "delta": 0.0
+   },
+   {
+    "name": "Chanel",
+    "en_label": "11.5%",
+    "ar_label": "12.4%",
+    "en": 0.114912,
+    "ar": 0.123684,
+    "delta": -0.008772000000000002
+   },
+   {
+    "name": "Dior",
+    "en_label": "10.8%",
+    "ar_label": "12.1%",
+    "en": 0.107895,
+    "ar": 0.121053,
+    "delta": -0.01315799999999999
+   },
+   {
+    "name": "Afnan",
+    "en_label": "11.1%",
+    "ar_label": "8.9%",
+    "en": 0.111403,
+    "ar": 0.089474,
+    "delta": 0.021929000000000004
+   },
+   {
+    "name": "Swiss Arabian",
+    "en_label": "12.9%",
+    "ar_label": "6.7%",
+    "en": 0.128947,
+    "ar": 0.066667,
+    "delta": 0.06228
+   },
+   {
+    "name": "Maison Francis Kurkdjian",
+    "en_label": "9.8%",
+    "ar_label": "6.2%",
+    "en": 0.098246,
+    "ar": 0.062281,
+    "delta": 0.035965
+   },
+   {
+    "name": "Creed",
+    "en_label": "8.1%",
+    "ar_label": "6.9%",
+    "en": 0.080702,
+    "ar": 0.069298,
+    "delta": 0.011403999999999997
+   }
+  ],
+  "n_higher_en": 7
+ },
+ "citations": {
+  "n_answers": 1500,
+  "total": 24402,
+  "opaque": 5666,
+  "opaque_share_label": "23.2%",
+  "resolvable": 18736,
+  "n_domains": 1879,
+  "opaque_host": "vertexaisearch.cloud.google.com",
+  "per_engine": [
+   {
+    "key": "openai",
+    "label": "ChatGPT",
+    "median": 4,
+    "total": 2135,
+    "n_answers": 500,
+    "n_domains": 323
+   },
+   {
+    "key": "gemini",
+    "label": "Gemini",
+    "median": 11,
+    "total": 5666,
+    "n_answers": 500,
+    "n_domains": 0
+   },
+   {
+    "key": "perplexity",
+    "label": "Perplexity",
+    "median": 35,
+    "total": 16601,
+    "n_answers": 500,
+    "n_domains": 1670
+   }
+  ],
+  "top": [
+   {
+    "domain": "youtube.com",
+    "n": 1967
+   },
+   {
+    "domain": "reddit.com",
+    "n": 1604
+   },
+   {
+    "domain": "noon.com",
+    "n": 378
+   },
+   {
+    "domain": "instagram.com",
+    "n": 289
+   },
+   {
+    "domain": "fragrantica.com",
+    "n": 255
+   },
+   {
+    "domain": "amouage.com",
+    "n": 215
+   },
+   {
+    "domain": "riah.ae",
+    "n": 170
+   },
+   {
+    "domain": "facebook.com",
+    "n": 153
+   },
+   {
+    "domain": "amazon.ae",
+    "n": 144
+   },
+   {
+    "domain": "vanilla.sa",
+    "n": 143
+   },
+   {
+    "domain": "ar-ae.ajmal.com",
+    "n": 129
+   },
+   {
+    "domain": "en-ae.ajmal.com",
+    "n": 126
+   },
+   {
+    "domain": "lattafa.com",
+    "n": 117
+   },
+   {
+    "domain": "sephora.me",
+    "n": 112
+   },
+   {
+    "domain": "uae.swissarabian.com",
+    "n": 103
+   },
+   {
+    "domain": "gulfnews.com",
+    "n": 94
+   },
+   {
+    "domain": "whowhatwear.com",
+    "n": 88
+   },
+   {
+    "domain": "dresans.com",
+    "n": 79
+   },
+   {
+    "domain": "faces.ae",
+    "n": 77
+   },
+   {
+    "domain": "vperfumes.com",
+    "n": 77
+   }
+  ]
+ },
+ "cooccurrence": {
+  "rows": [
+   {
+    "entity": "Armaf",
+    "domain": "armaf.ae",
+    "n_cited": 28,
+    "rate_cited": 1.0,
+    "rate_cited_label": "100%",
+    "rate_other": 0.15217391304347827,
+    "rate_other_label": "15.2%"
+   },
+   {
+    "entity": "Rasasi",
+    "domain": "rasasistore.com",
+    "n_cited": 33,
+    "rate_cited": 1.0,
+    "rate_cited_label": "100%",
+    "rate_other": 0.2174505794137696,
+    "rate_other_label": "21.7%"
+   },
+   {
+    "entity": "Al Haramain",
+    "domain": "shop.alharamainperfumes.com",
+    "n_cited": 10,
+    "rate_cited": 1.0,
+    "rate_cited_label": "100%",
+    "rate_other": 0.0610738255033557,
+    "rate_other_label": "6.1%"
+   },
+   {
+    "entity": "Amouage",
+    "domain": "amouage.com",
+    "n_cited": 110,
+    "rate_cited": 1.0,
+    "rate_cited_label": "100%",
+    "rate_other": 0.13884892086330936,
+    "rate_other_label": "13.9%"
+   },
+   {
+    "entity": "Nishane",
+    "domain": "nishane.com",
+    "n_cited": 18,
+    "rate_cited": 1.0,
+    "rate_cited_label": "100%",
+    "rate_other": 0.058704453441295545,
+    "rate_other_label": "5.9%"
+   },
+   {
+    "entity": "By Kilian",
+    "domain": "bykilian.com",
+    "n_cited": 14,
+    "rate_cited": 1.0,
+    "rate_cited_label": "100%",
+    "rate_other": 0.05450874831763122,
+    "rate_other_label": "5.5%"
+   },
+   {
+    "entity": "Lattafa",
+    "domain": "lattafa.com",
+    "n_cited": 78,
+    "rate_cited": 0.9871794871794872,
+    "rate_cited_label": "99%",
+    "rate_other": 0.2552742616033755,
+    "rate_other_label": "25.5%"
+   },
+   {
+    "entity": "Swiss Arabian",
+    "domain": "swissarabian.com",
+    "n_cited": 87,
+    "rate_cited": 0.9425287356321839,
+    "rate_cited_label": "94%",
+    "rate_other": 0.09341825902335456,
+    "rate_other_label": "9.3%"
+   },
+   {
+    "entity": "Afnan",
+    "domain": "afnan.com",
+    "n_cited": 64,
+    "rate_cited": 0.90625,
+    "rate_cited_label": "91%",
+    "rate_other": 0.1309192200557103,
+    "rate_other_label": "13.1%"
+   },
+   {
+    "entity": "Chanel",
+    "domain": "chanel.com",
+    "n_cited": 35,
+    "rate_cited": 0.8857142857142857,
+    "rate_cited_label": "89%",
+    "rate_other": 0.14744027303754267,
+    "rate_other_label": "14.7%"
+   },
+   {
+    "entity": "Sephora",
+    "domain": "sephora.me",
+    "n_cited": 49,
+    "rate_cited": 0.8367346938775511,
+    "rate_cited_label": "84%",
+    "rate_other": 0.06547208821502412,
+    "rate_other_label": "6.5%"
+   },
+   {
+    "entity": "Anfasic Dokhoon",
+    "domain": "anfasic.ae",
+    "n_cited": 20,
+    "rate_cited": 0.75,
+    "rate_cited_label": "75%",
+    "rate_other": 0.04054054054054054,
+    "rate_other_label": "4.1%"
+   },
+   {
+    "entity": "Ahmed Al Maghribi",
+    "domain": "ae.ahmedalmaghribi.com",
+    "n_cited": 42,
+    "rate_cited": 0.6904761904761905,
+    "rate_cited_label": "69%",
+    "rate_other": 0.03292181069958848,
+    "rate_other_label": "3.3%"
+   },
+   {
+    "entity": "Dior",
+    "domain": "dior.com",
+    "n_cited": 29,
+    "rate_cited": 0.6896551724137931,
+    "rate_cited_label": "69%",
+    "rate_other": 0.2229775662814412,
+    "rate_other_label": "22.3%"
+   },
+   {
+    "entity": "Golden Scent",
+    "domain": "goldenscent.com",
+    "n_cited": 38,
+    "rate_cited": 0.5526315789473685,
+    "rate_cited_label": "55%",
+    "rate_other": 0.006839945280437756,
+    "rate_other_label": "0.7%"
+   },
+   {
+    "entity": "The Spirit of Dubai",
+    "domain": "thespiritofdubai.com",
+    "n_cited": 10,
+    "rate_cited": 0.5,
+    "rate_cited_label": "50%",
+    "rate_other": 0.01879194630872483,
+    "rate_other_label": "1.9%"
+   },
+   {
+    "entity": "noon",
+    "domain": "noon.com",
+    "n_cited": 173,
+    "rate_cited": 0.3179190751445087,
+    "rate_cited_label": "32%",
+    "rate_other": 0.0640542577241899,
+    "rate_other_label": "6.4%"
+   },
+   {
+    "entity": "Ounass",
+    "domain": "ounass.ae",
+    "n_cited": 36,
+    "rate_cited": 0.25,
+    "rate_cited_label": "25%",
+    "rate_other": 0.015027322404371584,
+    "rate_other_label": "1.5%"
+   },
+   {
+    "entity": "Emirates Pride",
+    "domain": "emiratespride.com",
+    "n_cited": 38,
+    "rate_cited": 0.15789473684210525,
+    "rate_cited_label": "16%",
+    "rate_other": 0.015047879616963064,
+    "rate_other_label": "1.5%"
+   },
+   {
+    "entity": "Amazon.ae",
+    "domain": "amazon.ae",
+    "n_cited": 71,
+    "rate_cited": 0.14084507042253522,
+    "rate_cited_label": "14%",
+    "rate_other": 0.018894331700489854,
+    "rate_other_label": "1.9%"
+   },
+   {
+    "entity": "Al Majed Oud",
+    "domain": "almajed4oud.com",
+    "n_cited": 19,
+    "rate_cited": 0.10526315789473684,
+    "rate_cited_label": "11%",
+    "rate_other": 0.008777852802160702,
+    "rate_other_label": "0.9%"
+   },
+   {
+    "entity": "V Perfumes",
+    "domain": "vperfumes.com",
+    "n_cited": 124,
+    "rate_cited": 0.0967741935483871,
+    "rate_cited_label": "10%",
+    "rate_other": 0.03197674418604651,
+    "rate_other_label": "3.2%"
+   }
+  ],
+  "n_entities": 22,
+  "min_citing_answers": 10,
+  "n_answers": 1500,
+  "n_dropped": 10,
+  "dropped": [
+   {
+    "entity": "Abdul Samad Al Qurashi",
+    "domain": "abdulmajeedforoud.com"
+   },
+   {
+    "entity": "Arabian Oud",
+    "domain": "fragrancearabian.com"
+   },
+   {
+    "entity": "Dubai Duty Free",
+    "domain": "visitdubai.com"
+   },
+   {
+    "entity": "French Avenue",
+    "domain": "frenchfragrance.com"
+   },
+   {
+    "entity": "Global Village",
+    "domain": "global.goldenscent.com"
+   },
+   {
+    "entity": "Maison Alhambra",
+    "domain": "maisoncrivelli.com"
+   },
+   {
+    "entity": "Maison Francis Kurkdjian",
+    "domain": "maisoncrivelli.com"
+   },
+   {
+    "entity": "Parfums de Marly",
+    "domain": "essentialparfums.com"
+   },
+   {
+    "entity": "Paris Corner",
+    "domain": "pariscom2030.com"
+   },
+   {
+    "entity": "Paris Gallery",
+    "domain": "pariscom2030.com"
+   }
+  ]
+ },
+ "costs": {
+  "rows": [
+   {
+    "key": "openai",
+    "label": "ChatGPT",
+    "published": true,
+    "n_answers": 500,
+    "usd": 35.2912,
+    "usd_label": "$35.29",
+    "per_answer_label": "$0.071"
+   },
+   {
+    "key": "gemini",
+    "label": "Gemini",
+    "published": true,
+    "n_answers": 500,
+    "usd": 17.5928,
+    "usd_label": "$17.59",
+    "per_answer_label": "$0.035"
+   },
+   {
+    "key": "perplexity",
+    "label": "Perplexity",
+    "published": true,
+    "n_answers": 500,
+    "usd": 4.73,
+    "usd_label": "$4.73",
+    "per_answer_label": "$0.009"
+   },
+   {
+    "key": "anthropic",
+    "label": "Claude",
+    "published": false,
+    "n_answers": 138,
+    "usd": 33.1276,
+    "usd_label": "$33.13",
+    "per_answer_label": "$0.240"
+   }
+  ],
+  "published_total_label": "$57.61",
+  "all_total_label": "$90.74"
+ },
+ "excluded_engine": {
+  "key": "anthropic",
+  "label": "Claude",
+  "model_id": "claude-sonnet-5",
+  "n_answers": 134,
+  "n_expected": 500,
+  "coverage_label": "26.8%",
+  "top_n": 10,
+  "overlap_label": "9 of 10",
+  "measure": "share of the line's own answers naming the brand",
+  "top_brands": [
+   "Lattafa",
+   "Armaf",
+   "Chanel",
+   "Rasasi",
+   "Dior",
+   "Amouage",
+   "Ajmal",
+   "Maison Francis Kurkdjian",
+   "Creed",
+   "Yves Saint Laurent"
+  ],
+  "reasons": [
+   "Cost per answer in this experiment, shown in the table above.",
+   "No signed-out consumer surface was available, so this line could not take part in the consumer-surface check.",
+   "Its 10 most-named brands overlapped 9 of 10 with the brands the three published lines named most."
+  ]
+ },
+ "weighting_note": "The 76 blind questions were weighted equally. No observed data was available describing how often each type of question is asked in consumer AI products, so no other weighting could be applied.",
+ "limitations": [
+  "One product category: perfume and fragrance.",
+  "One market: the United Arab Emirates.",
+  "One collection day: 13 August 2026. The record describes that day.",
+  "Assistant outputs change as models and their retrieval layers are updated. A later run of the same battery is not expected to reproduce these figures.",
+  "The main board comes from model APIs, not from consumer-app transcripts. The two surfaces were compared only in the small check in section 13.",
+  "The consumer-surface check is 12 questions per assistant, 36 answers in total. It is a check on one collection day, not a measurement of the apps.",
+  "23.2% of returned citations resolved only to a Google redirector host and could not be attributed to a publisher.",
+  "No observed data describes how often each type of question is asked in consumer AI products, so the 76 blind questions were weighted equally.",
+  "Anonymous access to Perplexity's consumer surface became gated partway through the consumer check; affected answers were collected by clearing cookies and, in one case, by dismissing the overlay in the page inspector.",
+  "Five extraction and entity-resolution defects were identified in this run and are listed in full below."
+ ],
+ "bugs": [
+  {
+   "title": "Two spellings of one house scored separately",
+   "detail": "Frederic Malle and Frédéric Malle were resolved as distinct entities. Neither carries the other's questions, so the house appears twice at a lower share than its combined presence.",
+   "direction": "undercount"
+  },
+  {
+   "title": "Retailer and localised storefront scored separately",
+   "detail": "Names such as Bloomingdale's and Bloomingdale's UAE, Samawa and Samawa Perfumes, Jo Malone and Jo Malone London resolved to separate entities rather than to one.",
+   "direction": "undercount"
+  },
+  {
+   "title": "Arabic and Latin spellings of the same entity not merged",
+   "detail": "Entities named in Arabic script, such as دبي مول and هند العود, were not merged with their Latin-script equivalents, so bilingual presence is split across two rows.",
+   "direction": "undercount"
+  },
+  {
+   "title": "Observed-domain list contained misattributions",
+   "detail": "The entity-to-domain list assembled during the run mapped several entities to a domain belonging to someone else, including an attraction mapped to a retailer's subdomain and two houses mapped to one storefront. Section 16 applies a stated name-matching rule and reports how many rows it drops.",
+   "direction": "would have misattributed, now excluded"
+  },
+  {
+   "title": "Product names resolved as entities",
+   "detail": "A small number of product names, such as Acqua di Giò and Terre d'Hermès, were resolved as entities in their own right rather than folded into the house that makes them.",
+   "direction": "undercount for the house"
+  }
+ ],
+ "artifacts": {
+  "retained": [
+   "Raw answer text for all 1,500 scored runs, plus the excluded pilot line.",
+   "The citation list returned with each answer.",
+   "Per-answer extraction records, with the surface form of each mention.",
+   "Per-entity, per-engine and per-segment scores.",
+   "Provider spend per engine."
+  ],
+  "published": [
+   "This record and its figures.",
+   "The battery hash and composition counts.",
+   "The six question texts released as examples."
+  ],
+  "not_published": [
+   "The remaining 94 question texts, which stay sealed so a later wave measures the same battery.",
+   "Raw run artifacts are retained but are not currently published."
+  ]
+ }
+}
